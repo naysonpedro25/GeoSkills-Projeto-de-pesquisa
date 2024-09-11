@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/mainSliderFragment"
+        android:name="br.com.geoskills.view.slider.MainSliderFragment"
+        android:label="fragment_main_slider"
+        tools:layout="@layout/fragment_main_slider">
+        <action
+            android:id="@+id/action_mainSliderFragment_to_loginFragment"
+            app:destination="@id/auth"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/mainSliderFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation
+        android:id="@+id/auth"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="br.com.geoskills.view.auth.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/loginFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_recoverFragment"
+                app:destination="@id/recoverFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/loginFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/recoverFragment"
+            android:name="br.com.geoskills.view.auth.RecoverFragment"
+            android:label="fragment_recover"
+            tools:layout="@layout/fragment_recover">
+            <action
+                android:id="@+id/action_recoverFragment_to_registerFragment"
+                app:destination="@id/registerFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/recoverFragment" />
+            <action
+                android:id="@+id/action_recoverFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/recoverFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="br.com.geoskills.view.auth.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register">
+            <action
+                android:id="@+id/action_registerFragment_to_recoverFragment"
+                app:destination="@id/recoverFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/registerFragment" />
+            <action
+                android:id="@+id/action_registerFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/registerFragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/auth"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.geoskills.view.homeviewpager.MainHomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_main_home">
+        <action
+            android:id="@+id/action_homeFragment_to_auth"
+            app:destination="@id/auth"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_quizGameFragment"
+            app:destination="@id/quizGameFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_coordinatesGameFragment"
+            app:destination="@id/coordinatesGameFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_puzzleFragment"
+            app:destination="@id/puzzleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="br.com.geoskills.view.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_auth"
+            app:destination="@id/auth"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainSliderFragment"
+            app:destination="@id/mainSliderFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameFragment"
+        android:name="br.com.geoskills.view.games.QuizGameFragment"
+        android:label="fragment_quiz_game"
+        tools:layout="@layout/fragment_quiz_game">
+        <action
+            android:id="@+id/action_quizGameFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/coordinatesGameFragment"
+        android:name="br.com.geoskills.view.games.CoordinatesGameFragment"
+        android:label="fragment_coordinates_game"
+        tools:layout="@layout/fragment_coordinates_game">
+        <action
+            android:id="@+id/action_coordinatesGameFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/coordinatesGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/noNetworkFragment"
+        android:name="br.com.geoskills.view.NoNetworkFragment"
+        android:label="fragment_no_network"
+        app:enterAnim="@anim/nav_default_pop_enter_anim"
+        app:exitAnim="@anim/nav_default_pop_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        tools:layout="@layout/fragment_no_network" />
+    <fragment
+        android:id="@+id/puzzleFragment"
+        android:name="br.com.geoskills.view.games.PuzzleFragment"
+        android:label="fragment_puzzle"
+        tools:layout="@layout/fragment_puzzle" >
+        <action
+            android:id="@+id/action_puzzleFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GeoSkillsPesquisa" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_gradiente_activity</item>
+        <item name="android:statusBarColor">@color/blue_dark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="statusBarBackground">#000</item>
+        <item name="cardBackgroundColor">#fff</item>
+    </style>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_alert_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_title_setting_alert"
+        android:fontFamily="@font/plumpfull"
+        android:paddingHorizontal="23dp"
+        android:paddingVertical="10dp"
+        android:text="Parabéns"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/stars_user_points"
+        android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stars_3"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/user_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Portuação: +3"
+        android:textAllCaps="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/plumpfull"
+        android:textColor="@color/blue_deep_dark"
+        android:textSize="24sp"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_finish_quiz"
+        style="@style/Widget.AppCompat.Button.NoShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login_bg"
+        android:fontFamily="@font/plumpfull"
+        android:text="Próximo"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+
+
+
+</LinearLayout>

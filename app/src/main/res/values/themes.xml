@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GeoSkillsPesquisa" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_gradiente_activity</item>
+        <item name="android:navigationBarColor">#000</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/bg_transparent</item>
+        <item name="statusBarBackground">@color/blue_dark</item>
+        <item name="android:statusBarColor">@color/blue_dark</item>
+    </style>
+
+    <style name="Theme.GeoSkillsPesquisa" parent="Base.Theme.GeoSkillsPesquisa" />
+
+
+    <style name="Widget.AppCompat.Button.NoShadow" parent="Widget.AppCompat.Button">
+        <item name="android:stateListAnimator">@null</item>
+
+    </style>
+
+    <style name="dialogSetting">
+        <item name="windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="animdialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_up</item>
+    </style>
+
+    <style name="dialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">70%</item>
+    </style>
+
+</resources>

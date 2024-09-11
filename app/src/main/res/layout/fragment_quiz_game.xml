@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.games.QuizGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#3598DB"
+            android:elevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_back_btn_quiz"
+                android:src="@drawable/arrow_right" />
+
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_quiz" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:fontFamily="@font/plumpfull"-->
+<!--                android:text="Geo Quiz"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="35sp" />-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_timer"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/timer_bg"
+            android:elevation="1dp"
+            android:fontFamily="@font/plumpfull"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:textColor="@color/blue_deep_dark"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quest_bg"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+
+            <TextView
+                android:id="@+id/text_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="30dp"
+                android:fontFamily="@font/plumpfull"
+                android:text="orandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_cont"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/timer_bg"
+            android:elevation="1dp"
+            android:fontFamily="@font/plumpfull"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="00 / 00"
+            android:textAlignment="center"
+            android:textColor="@color/blue_deep_dark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnt_option_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/option_bg"
+                android:fontFamily="@font/plumpfull"
+                android:paddingVertical="20dp"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnt_option_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/option_bg"
+                android:fontFamily="@font/plumpfull"
+                android:paddingVertical="20dp"
+                android:text="B"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnt_option_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/option_bg"
+                android:fontFamily="@font/plumpfull"
+                android:paddingVertical="20dp"
+                android:text="C"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnt_option_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/option_bg"
+                android:fontFamily="@font/plumpfull"
+                android:paddingVertical="20dp"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

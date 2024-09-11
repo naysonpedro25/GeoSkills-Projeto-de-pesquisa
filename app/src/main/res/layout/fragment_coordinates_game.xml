@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".view.games.CoordinatesGameFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#3598DB"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_back_btn_quiz"
+            android:src="@drawable/arrow_right_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/plumpfull"
+            android:src="@drawable/title_coords"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+
+             />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_clear"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Latitude: 50°"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:textColor="@color/black"
+                android:text="Longitude: 40°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/red_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_red" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Latitude: 10°"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:textColor="@color/black"
+                android:text="Longitude: 80°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/green_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_green" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:textColor="@color/black"
+                android:text="Latitude: 80°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_3"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Longitude: 60°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/blue_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_blue" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_clear"
+        style="@style/Widget.AppCompat.Button.NoShadow"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+          android:background="@drawable/btn_register_bg"
+        android:fontFamily="@font/plumpfull"
+        android:paddingVertical="15dp"
+        android:text="Limpar"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_start"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/map_const"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/new_map"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.184" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.282" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.245" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.335" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.476" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.426" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.572" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.519" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_120"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.61" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_140"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.767" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.864" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/longitude_180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.961" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/latitude_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.881" />
+
+        <View
+            android:id="@+id/point_1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+        <View
+            android:id="@+id/point_2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+        <View
+            android:id="@+id/point_3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+        <View
+            android:id="@+id/point_4"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+        <View
+            android:id="@+id/point_5"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+        <View
+            android:id="@+id/point_6"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-11dp"
+            android:layout_marginTop="-11dp"
+            android:background="@drawable/bg_point_for_coordinate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:textColor="@color/black"
+                android:text="Latitude: 20°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Longitude: 160°"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/orange_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_orange" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Latitude: 70°"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Longitude: 160°"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/yellow_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_yellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/bg_coordinates_option"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/lat_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/plumpfull"
+                android:text="Latitude: 40°"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/long_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plumpfull"
+                android:text="Longitude: 120°"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/purple_coord"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_block_for_coordinate_option"
+                android:backgroundTint="@color/coor_purple" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        style="@style/Widget.AppCompat.Button.NoShadow"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/btn_login_bg"
+        android:fontFamily="@font/plumpfull"
+        android:paddingVertical="15dp"
+        android:text="Continuar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/map_const" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
