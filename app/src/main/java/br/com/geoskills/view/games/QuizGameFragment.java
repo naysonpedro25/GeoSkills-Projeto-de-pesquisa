@@ -103,7 +103,7 @@ public class QuizGameFragment extends Fragment {
         binding.textCont.setText((currentOptionSelectIndex + 1) + " / " + questions.size());
         initClicks();
         initTimer();
-
+        startTutorial3();
         if (currentOptionSelectIndex == 0) {
             Question currentQuestion = questions.get(currentOptionSelectIndex);
             String[] choices = currentQuestion.getChoices();

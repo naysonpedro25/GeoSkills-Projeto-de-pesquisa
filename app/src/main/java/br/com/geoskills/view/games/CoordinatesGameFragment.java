@@ -228,6 +228,7 @@ public class CoordinatesGameFragment extends Fragment {
     }
 
     private AlertDialog makeAlertDialogNextGame(int points, ClickListenerBtnNextLevel clickListenerBtnNextLevel){
+
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         View view = LayoutInflater.from(requireContext()).inflate(R.layout.coordinate_next_level_alert, null);
         AlertDialog alertDialog = builder.setView(view).create();

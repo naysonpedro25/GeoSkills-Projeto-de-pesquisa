@@ -298,6 +298,7 @@ public class MainHomeFragment extends Fragment {
          HomeFragment.Tutorial3 tutorial3 = () -> {
             startTutorial3();
          };
+
          homeFragment.startTutorial2(tutorial3);
       }
    }
